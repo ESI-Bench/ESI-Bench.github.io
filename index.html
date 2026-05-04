@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ESI-Bench | Embodied Scene Intelligence Benchmark</title>
+  <style>
+    :root{--bg:#f5f7fb;--card:#fff;--ink:#0f172a;--muted:#475569;--line:#e2e8f0;--brand:#1d4ed8}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+    .container{width:min(1180px,94vw);margin:0 auto}
+    header{background:linear-gradient(180deg,#eaf1ff,#f5f7fb);border-bottom:1px solid var(--line);padding:36px 0 22px}
+    h1{margin:0;font-size:clamp(1.8rem,4vw,2.6rem)} .sub{margin:.45rem 0 0;color:var(--muted)}
+    .meta{margin:12px 0 0}.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .btn{padding:8px 14px;border-radius:10px;border:1px solid var(--brand);text-decoration:none;font-weight:600}.btn.primary{background:var(--brand);color:#fff}.btn.ghost{background:#fff;color:var(--brand)}
+    main{padding:18px 0 32px} section{margin:22px 0} h2{font-size:1.35rem;margin:0 0 12px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+    .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+    .teaser{width:100%;border:1px solid var(--line);border-radius:10px;background:#fff}
+    .pdf-grid,.grid{display:grid;gap:12px}.pdf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}.card img,.card video{width:100%;height:176px;object-fit:cover;display:block;background:#f1f5f9}
+    .txt{padding:10px 12px}.txt h3{margin:0 0 4px;font-size:1rem}.txt p{margin:0;color:var(--muted);font-size:.9rem}
+    .task{margin:14px 0 20px}.task .title{display:inline-block;background:#dbeafe;color:#1e3a8a;font-weight:700;border-radius:999px;padding:5px 11px;margin-bottom:10px}
+    .paper-fig{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+    .paper-fig img{width:100%;height:220px;object-fit:cover;display:block;background:#f8fafc}
+    .carousel{position:relative}.carousel .slides img{display:none}.carousel .slides img.active{display:block}.carousel .ctrl{position:absolute;top:8px;right:8px;display:flex;gap:6px}
+    .carousel button{border:1px solid #cbd5e1;background:rgba(255,255,255,.92);color:#334155;border-radius:999px;padding:2px 7px;font-size:.78rem;cursor:pointer}
+    .carousel .dots{position:absolute;left:8px;bottom:8px;display:flex;gap:5px}.carousel .dot{width:8px;height:8px;border-radius:50%;background:#cbd5e1}.carousel .dot.active{background:#2563eb}
+    footer{border-top:1px solid var(--line);padding:20px 0 36px;color:var(--muted)}
+    @media (max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}.pdf-grid{grid-template-columns:1fr}} @media (max-width:640px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header><div class="container">
+  <h1>ESI-Bench: Embodied Scene Intelligence Benchmark</h1>
+  <p class="sub">Submission companion page (non-anonymous).</p>
+  <p class="meta"><strong>Authors:</strong> Author A, Author B, Author C &nbsp;|&nbsp; <strong>Affiliations:</strong> XXX Lab / XXX University</p>
+  <div class="btns">
+    <a class="btn primary" href="neurips26_esi_bench%20(3).pdf" target="_blank" rel="noopener">Paper PDF</a>
+    <a class="btn ghost" href="static/imgs/esi_qualitative_v4.pdf" target="_blank" rel="noopener">Qualitative Appendix</a>
+  </div>
+</div></header>
+
+<main class="container">
+  <section>
+    <h2>Teaser</h2>
+    <div class="panel">
+      <img class="teaser" src="static/imgs/paper_figures/esi_teaser_v11_page-0001.jpg" alt="ESI-Bench teaser"/>
+      <p class="sub">Teaser. Original paper figure file: <a href="static/imgs/paper_figures/esi_teaser_v11.pdf" target="_blank" rel="noopener">esi_teaser_v11.pdf</a>.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Paper Figures</h2>
+    <div class="pdf-grid">
+      <article class="paper-fig"><img src="static/imgs/paper_figures/task_distribution3.png" alt="Task Distribution"><div class="txt"><h3>Task Distribution</h3><p>Overview of the task distribution across categories.</p></div></article>
+      <article class="paper-fig"><img src="static/imgs/paper_figures/dataset_example_v3_page-0001.jpg" alt="Dataset Examples"><div class="txt"><h3>Dataset Examples</h3><p>Task examples used in the paper narrative.</p></div></article>
+      <article class="paper-fig"><img src="static/imgs/paper_figures/avg_steps_figure-6_page-0001.jpg" alt="Average Steps Figure"><div class="txt"><h3>Average Steps</h3><p>Complexity and average interaction step analysis.</p></div></article>
+      <article class="paper-fig"><img src="static/imgs/paper_figures/esi_qualitative_v4_page-0001" alt="Qualitative Figure Set"><div class="txt"><h3>Qualitative Figure Set</h3><p>Extended qualitative results and case studies.</p></div></article>
+    </div>
+  </section>
+
+  <section><h2>10 Major Task Categories · 29 Subtasks</h2>
+    <div class="task"><div class="title">1) Action Sequencing</div><div class="grid"><article class="card"><img src="static/imgs/action_sequencing/action_order_inference.png" alt="Action Order Inference"><div class="txt"><h3>Action Order Inference</h3><p>Infer valid action order from state dependencies.</p></div></article></div></div>
+    <div class="task"><div class="title">2) Cognitive Mapping</div><div class="grid">
+      <article class="card"><div class="carousel" data-carousel><div class="slides"><img src="static/imgs/cognitive_mapping/long-horizon_navigation-1.png" alt="Long-horizon Navigation" class="active"><img src="static/imgs/cognitive_mapping/long-horizon_navigation-2.png" alt="Long-horizon Navigation"></div><div class="ctrl"><button type="button" data-prev>‹</button><button type="button" data-next>›</button></div><div class="dots"><span class="dot active"></span><span class="dot"></span></div></div><div class="txt"><h3>Long-horizon Navigation</h3><p>Cross-view route planning over extended trajectories.</p></div></article>
+      <article class="card"><div class="carousel" data-carousel><div class="slides"><img src="static/imgs/cognitive_mapping/traversable_passage-1.png" alt="Traversable Passage" class="active"><img src="static/imgs/cognitive_mapping/traversable_passage-2.png" alt="Traversable Passage"></div><div class="ctrl"><button type="button" data-prev>‹</button><button type="button" data-next>›</button></div><div class="dots"><span class="dot active"></span><span class="dot"></span></div></div><div class="txt"><h3>Traversable Passage</h3><p>Judge reachable passages under geometry constraints.</p></div></article>
+      <article class="card"><img src="static/imgs/cognitive_mapping/regional_boundary.png" alt="Regional Boundary"><div class="txt"><h3>Regional Boundary</h3><p>Recognize semantic/spatial region boundaries.</p></div></article>
+      <article class="card"><img src="static/imgs/cognitive_mapping/topological_connectivity.png" alt="Topological Connectivity"><div class="txt"><h3>Topological Connectivity</h3><p>Understand connectivity of navigable spaces.</p></div></article>
+    </div></div>
+    <div class="task"><div class="title">3) Enumerative Perception</div><div class="grid">
+      <article class="card"><img src="static/imgs/enumerative_perception/category_disambiguation.png" alt="Category Disambiguation"><div class="txt"><h3>Category Disambiguation</h3><p>Distinguish visually similar categories.</p></div></article>
+      <article class="card"><img src="static/imgs/enumerative_perception/counting_w_occlusion.png" alt="Counting with Occlusion"><div class="txt"><h3>Counting with Occlusion</h3><p>Count objects with partial visibility.</p></div></article>
+      <article class="card"><img src="static/imgs/enumerative_perception/illumination_variability.jpg" alt="Illumination Variability"><div class="txt"><h3>Illumination Variability</h3><p>Maintain recognition across lighting conditions.</p></div></article>
+      <article class="card"><img src="static/imgs/enumerative_perception/merged_observation.png" alt="Merged Observation"><div class="txt"><h3>Merged Observation</h3><p>Integrate distributed clues into coherent counting.</p></div></article>
+      <article class="card"><img src="static/imgs/enumerative_perception/spatial_segmentation.png" alt="Spatial Segmentation"><div class="txt"><h3>Spatial Segmentation</h3><p>Segment instances in cluttered scenes.</p></div></article>
+      <article class="card"><img src="static/imgs/enumerative_perception/structural_enclosure.png" alt="Structural Enclosure"><div class="txt"><h3>Structural Enclosure</h3><p>Reason about enclosed and contained entities.</p></div></article>
+    </div></div>
+    <div class="task"><div class="title">4) Metric Comparison</div><div class="grid">
+      <article class="card"><div class="carousel" data-carousel><div class="slides"><img src="static/imgs/matric_comparison/dimensional_size_1.png" alt="Dimensional Size" class="active"><img src="static/imgs/matric_comparison/dimensional_size_2.png" alt="Dimensional Size"><img src="static/imgs/matric_comparison/dimensional_size_3.png" alt="Dimensional Size"></div><div class="ctrl"><button type="button" data-prev>‹</button><button type="button" data-next>›</button></div><div class="dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div></div><div class="txt"><h3>Dimensional Size</h3><p>Compare size/scale relationships between objects.</p></div></article>
+      <article class="card"><div class="carousel" data-carousel><div class="slides"><img src="static/imgs/matric_comparison/spatial_distance_1.png" alt="Spatial Distance" class="active"><img src="static/imgs/matric_comparison/spatial_distance_2.png" alt="Spatial Distance"></div><div class="ctrl"><button type="button" data-prev>‹</button><button type="button" data-next>›</button></div><div class="dots"><span class="dot active"></span><span class="dot"></span></div></div><div class="txt"><h3>Spatial Distance</h3><p>Compare object-to-object distance magnitudes.</p></div></article>
+    </div></div>
+    <div class="task"><div class="title">5) Perceptual Grounding</div><div class="grid">
+      <article class="card"><div class="carousel" data-carousel><div class="slides"><img src="static/imgs/perceptual_grounding/partial_occlusion_1.png" alt="Partial Occlusion" class="active"><img src="static/imgs/perceptual_grounding/partial_occulation_2.png" alt="Partial Occlusion"></div><div class="ctrl"><button type="button" data-prev>‹</button><button type="button" data-next>›</button></div><div class="dots"><span class="dot active"></span><span class="dot"></span></div></div><div class="txt"><h3>Partial Occlusion</h3><p>Ground objects under partial blocking.</p></div></article>
+      <article class="card"><div class="carousel" data-carousel><div class="slides"><img src="static/imgs/perceptual_grounding/transparency_1.png" alt="Transparency" class="active"><img src="static/imgs/perceptual_grounding/transparency_2.png" alt="Transparency"></div><div class="ctrl"><button type="button" data-prev>‹</button><button type="button" data-next>›</button></div><div class="dots"><span class="dot active"></span><span class="dot"></span></div></div><div class="txt"><h3>Transparency</h3><p>Parse scenes with transparent media.</p></div></article>
+      <article class="card"><div class="carousel" data-carousel><div class="slides"><img src="static/imgs/perceptual_grounding/view_hallucination_1.png" alt="View Hallucination" class="active"><img src="static/imgs/perceptual_grounding/view_hallucination_2.png" alt="View Hallucination"></div><div class="ctrl"><button type="button" data-prev>‹</button><button type="button" data-next>›</button></div><div class="dots"><span class="dot active"></span><span class="dot"></span></div></div><div class="txt"><h3>View Hallucination</h3><p>Avoid inconsistent inference across viewpoints.</p></div></article>
+    </div></div>
+    <div class="task"><div class="title">6) Physical Capacity</div><div class="grid">
+      <article class="card"><img src="static/imgs/physical_capacity/accommodation_1.png" alt="Accommodation"><div class="txt"><h3>Accommodation</h3><p>Assess whether objects can fit into containers.</p></div></article>
+      <article class="card"><img src="static/imgs/physical_capacity/liquid.png" alt="Liquid Behavior"><div class="txt"><h3>Liquid Behavior</h3><p>Reason about liquid-specific capacity behaviors.</p></div></article>
+      <article class="card"><div class="carousel" data-carousel><div class="slides"><img src="static/imgs/physical_capacity/regid_1.png" alt="Rigid Constraints" class="active"><img src="static/imgs/physical_capacity/rigid_2.png" alt="Rigid Constraints"><img src="static/imgs/physical_capacity/regid_3.png" alt="Rigid Constraints"><img src="static/imgs/physical_capacity/regid_4.png" alt="Rigid Constraints"></div><div class="ctrl"><button type="button" data-prev>‹</button><button type="button" data-next>›</button></div><div class="dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div></div><div class="txt"><h3>Rigid Constraints</h3><p>Handle rigid-object capacity limitations.</p></div></article>
+    </div></div>
+    <div class="task"><div class="title">7) Physical Dynamics</div><div class="grid"><article class="card"><img src="static/imgs/physical_dynamics/stability.png" alt="Stability"><div class="txt"><h3>Stability</h3><p>Predict stable vs unstable object configurations.</p></div></article><article class="card"><video src="static/imgs/physical_dynamics/inclined.mp4" autoplay muted loop playsinline></video><div class="txt"><h3>Inclined-plane Dynamics</h3><p>Understand motion under inclined geometry.</p></div></article></div></div>
+    <div class="task"><div class="title">8) Spatial Relations</div><div class="grid"><article class="card"><img src="static/imgs/spatial_relations/geometric_configuration.png" alt="Geometric Configuration"><div class="txt"><h3>Geometric Configuration</h3><p>Infer geometric layout relationships.</p></div></article><article class="card"><img src="static/imgs/spatial_relations/linear_alignment.png" alt="Linear Alignment"><div class="txt"><h3>Linear Alignment</h3><p>Identify collinearity/alignment structures.</p></div></article><article class="card"><img src="static/imgs/spatial_relations/physical_contact.png" alt="Physical Contact"><div class="txt"><h3>Physical Contact</h3><p>Detect contact and touching constraints.</p></div></article></div></div>
+    <div class="task"><div class="title">9) Specular Reflection</div><div class="grid"><article class="card"><img src="static/imgs/specular_reflection/reflection_authenticity.png" alt="Reflection Authenticity"><div class="txt"><h3>Reflection Authenticity</h3><p>Verify physically plausible reflections.</p></div></article><article class="card"><img src="static/imgs/specular_reflection/reflection_spatial_relation.png" alt="Reflection Spatial Relation"><div class="txt"><h3>Reflection Spatial Relation</h3><p>Relate reflected and direct-view geometry.</p></div></article><article class="card"><img src="static/imgs/specular_reflection/scene_correspondence.png" alt="Scene Correspondence"><div class="txt"><h3>Scene Correspondence</h3><p>Match entities between scene and reflection.</p></div></article></div></div>
+    <div class="task"><div class="title">10) Temporal Scene Understanding</div><div class="grid"><article class="card"><img src="static/imgs/temporal_scene_understanding/multi-agent_interaction.png" alt="Multi-agent Interaction"><div class="txt"><h3>Multi-agent Interaction</h3><p>Track interacting entities over time.</p></div></article><article class="card"><img src="static/imgs/temporal_scene_understanding/unobserved_change.png" alt="Unobserved Change"><div class="txt"><h3>Unobserved Change</h3><p>Infer hidden state transitions from evidence.</p></div></article></div></div>
+  </section>
+</main>
+<footer><div class="container">© 2026 ESI-Bench. Submission companion webpage.</div></footer>
+<script>
+document.querySelectorAll('[data-carousel]').forEach((c)=>{const imgs=[...c.querySelectorAll('.slides img')],dots=[...c.querySelectorAll('.dot')];let i=0;const show=(n)=>{i=(n+imgs.length)%imgs.length;imgs.forEach((im,k)=>im.classList.toggle('active',k===i));dots.forEach((d,k)=>d.classList.toggle('active',k===i));};c.querySelector('[data-prev]')?.addEventListener('click',()=>show(i-1));c.querySelector('[data-next]')?.addEventListener('click',()=>show(i+1));});
+</script>
+</body>
+</html>
